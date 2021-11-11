@@ -1,0 +1,5 @@
+[2021-11-09T16:41:47.818] [INFO] logInfo - 获取商品列表数据sql：============> SELECT a.id,a.title,a.add_time,left(a.zhaiyao,25) as zhaiyao,a.click,concat('https://img0.baidu.com',a.img_url) as img_url,b.sell_price,b.market_price,b.stock_quantity FROM dt_article as a,dt_article_attribute_value b where a.id = b.article_id and a.channel_id = 7 limit 0,10 
+[2021-11-09T16:43:45.135] [INFO] logInfo - 获取商品获取商品标题，价格，参数区数据sql：============>  SELECT da.id,da.title,da.add_time,daa.goods_no,daa.stock_quantity,daa.market_price,daa.sell_price FROM dt_article da , dt_article_attribute_value daa 
+				WHERE  da.id = daa.article_id and da.id = 87 
+[2021-11-09T16:43:45.139] [INFO] logInfo - 获取商品图文描述sql：============>  SELECT title,content FROM dt_article da WHERE da.id = 87 
+[2021-11-09T16:43:45.145] [INFO] logInfo - 获取图片分享明细中缩略图sql：============> select thumb_path as src  from dt_article_albums where article_id =87
